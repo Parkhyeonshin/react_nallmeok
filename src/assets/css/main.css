@@ -1,0 +1,409 @@
+/* main (메인) */
+#main {
+    padding-top: 60px;
+}
+#main > .main__inner {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    min-height: 877px;
+}
+
+/* contents (콘텐츠) */
+#contents {
+    width: 70%;
+    background: #f1f1f1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    z-index: 1;
+}
+#contents.normalday {
+    background: url(../img/bg_normal_day.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+#contents.normalnight {
+    background: url(../img/bg_normal_night.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+#contents.rainyday {
+    background: url(../img/bg_rain_day.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+#contents.rainynight {
+    background: url(../img/bg_rain_night.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+#contents.snowday {
+    background: url(../img/bg_snow_day.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+#contents.snownight {
+    background: url(../img/bg_snow_night.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+#contents.day::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/Sun.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 40%;
+    z-index: -1;
+}
+#contents.night::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/moon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 40%;
+    z-index: -1;
+}
+#contents::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    /* background-image: url("data:image/svg+xml,%0A%3Csvg width='1420' height='466' viewBox='0 0 1420 466' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M715.76 106.282C355.927 -36.006 100.844 -5.29676 0 27.8439V466H1420V27.8438C1335.18 113.277 1075.59 248.571 715.76 106.282Z' fill='white' fill-opacity='0.5'/%3E%3Cpath d='M704.24 106.282C1064.07 -36.006 1319.16 -5.29676 1420 27.8439V466H0V27.8439C84.8159 113.277 344.406 248.571 704.24 106.282Z' fill='%23CDCDCD' fill-opacity='0.5'/%3E%3C/svg%3E%0A"); */
+    background-image: url(../img/bg_bottom.png);
+    background-size: 100% 47%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+#contents > .contents__inner {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px;
+}
+#contents > .contents__inner > h2 {
+    font-family: "LeeSeoyun";
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: white;
+    font-weight: 400;
+    font-size: 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+#contents > .contents__inner > h2::after {
+    content: "";
+    position: absolute;
+    bottom: -45%;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    width: 0px;
+    height: 0px;
+    border-bottom: 34px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+#contents > .contents__inner > .contetns__slideWrap {
+    width: 100%;
+    /* height: 300px; */
+    /* background: #000; */
+    margin-top: 30px;
+}
+#contents > .contents__inner > .contents__descWrap {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2.5px);
+    border-radius: 30px;
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+#contents > .contents__inner > .contents__descWrap > .time_weather {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 3px solid #dcdcdc;
+}
+#contents > .contents__inner > .contents__descWrap > .time_weather > div {
+    width: 18%;
+    margin-bottom: 50px;
+}
+#contents > .contents__inner > .contents__descWrap > .time_weather div > img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+#contents > .contents__inner > .contents__descWrap > .time__desc {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: "LeeSeoyun";
+    line-height: 1.2;
+    font-size: 20px;
+}
+#contents > .contents__inner > .contents__descWrap > .time__desc > div > p {
+    white-space: pre-wrap;
+}
+/* aside (사이드) */
+#aside {
+    font-family: "SUIT";
+    width: 30%;
+    background-color: #f53c36;
+    padding: 30px;
+}
+#aside > .aside__inner {
+}
+
+/* aside > form */
+
+.aside__inner > p {
+    position: relative;
+    margin-bottom: 30px;
+}
+.aside__inner > p > label {
+}
+.aside__inner > p > input {
+    color: #333;
+    width: 100%;
+    padding: 10px 10px 10px 50px;
+    border: 0;
+    border-radius: 50px;
+}
+.aside__inner > p > input::placeholder {
+    color: #aaa;
+}
+.aside__inner > p > input:focus {
+    outline: 2px solid #751d1a;
+}
+.aside__inner > p > img {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* aside > mainWeather */
+.mainWeather__box {
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    border-bottom: 3px solid #fff;
+}
+.mainWeather__box > .mainWeather__inner {
+    overflow: hidden;
+    position: relative;
+
+    width: 100%;
+    height: 440px;
+    background-color: rgb(228, 228, 228);
+
+    border-radius: 50px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mainWeather__inner > .main_cityName {
+    position: relative;
+    top: 20px;
+    left: 52%;
+    transform: translateX(-52%);
+
+    color: #333;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+}
+.mainWeather__inner > .main_cityName > img {
+    position: absolute;
+    top: 0;
+    left: -20px;
+
+    width: 18px;
+    height: 18px;
+}
+.mainWeather__inner > .main_cityTemp {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+
+    color: #333;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+}
+.mainWeather__inner > .main_weatherImg {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    width: 280px;
+    height: 280px;
+    /* background-image: url("../img/weather_sprite.svg"); */
+}
+
+/* aside > main_weatherInfo */
+.main__weatherInfo {
+    text-align: center;
+
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 90%;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    background-color: #db3630;
+    padding: 20px;
+
+    border-radius: 10px 10px 30px 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.mainWeatherInfo__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mainWeatherInfo__inner > .info {
+    width: 23%;
+    background-color: #fff;
+    padding: 10px 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.mainWeatherInfo__inner > .info:nth-child(1) {
+    border-radius: 5px 5px 5px 20px;
+}
+.mainWeatherInfo__inner > .info:nth-child(2) {
+    border-radius: 5px;
+}
+.mainWeatherInfo__inner > .info:nth-child(3) {
+    border-radius: 5px;
+}
+.mainWeatherInfo__inner > .info:nth-child(4) {
+    border-radius: 5px 5px 20px 5px;
+}
+.mainWeatherInfo__inner > .info > h5 {
+    color: #555555;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.mainWeatherInfo__inner > .info > p {
+    color: #777777;
+    font-size: 12px;
+}
+.mainWeatherInfo__inner > article {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.mainWeatherInfo__inner > article > p,
+.mainWeatherInfo__inner > article > h5 {
+    width: 100%;
+}
+.mainWeatherInfo__inner > article > p {
+    display: block;
+}
+/* aside > subWeather__box */
+.subWeather__box {
+}
+.subWeather__box > .subWeather__inner {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.subWeather__inner > .sub_info {
+    width: 30%;
+    margin-bottom: 20px;
+}
+.subWeather__inner > .sub_info > h4 {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.subInfo_box {
+    position: relative;
+
+    background-color: #fff;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.subInfo_box > .subWeather_img {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60px;
+    height: 60px;
+}
+
+.subInfo_box > .sub_temp {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #666666;
+    font-size: 16px;
+}
+
+/* 다른 나라 사진 변경 */
+.sub_info.japan .subWeather_img {
+    background: url("../img/subWeather_sprite.svg");
+    background-position: -300px;
+}
+.sub_info.china .subWeather_img {
+    background: url("../img/subWeather_sprite.svg");
+    background-position: -300px;
+}
+.sub_info.russia .subWeather_img {
+    background: url("../img/subWeather_sprite.svg");
+    background-position: -300px;
+}
+.sub_info.us .subWeather_img {
+    background: url("../img/subWeather_sprite.svg");
+    background-position: -100px;
+}
+.sub_info.western .subWeather_img {
+    background: url("../img/subWeather_sprite.svg");
+    background-position: -300px;
+}
+.sub_info.eastern .subWeather_img {
+    background: url("../img/subWeather_sprite.svg");
+    background-position: -100px;
+}
+
+/* 추가 */
+.sub_temp em {
+    font-size: 10px;
+}

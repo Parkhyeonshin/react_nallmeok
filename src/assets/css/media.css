@@ -1,0 +1,135 @@
+/* 반응형 1250, 780,  480*/
+@media (max-width: 1250px) {
+    #header .hambuger__menu {
+        display: block !important;
+    }
+    #main > .main__inner {
+        position: relative;
+    }
+    #contents {
+        width: 100%;
+    }
+    #aside {
+        position: absolute;
+        top: 0;
+        right: -60%;
+        width: 25%;
+        z-index: 100;
+        transform: scaleX(0);
+        transition: all 0.5s ease-out;
+        border-bottom-left-radius: 20px;
+    }
+    #aside.active {
+        right: 0%;
+        width: 60%;
+        transform: scaleX(1);
+
+        transition: all 0.5s ease-out;
+    }
+    .mainWeatherInfo__inner > .info {
+        padding: 5px 5px;
+    }
+    .mainWeather__box > .mainWeather__inner {
+        height: 400px;
+    }
+}
+@media (max-width: 780px) {
+    #contents > .contents__inner {
+        width: 99.5%;
+        padding: 0;
+    }
+    #aside {
+        width: 60%;
+    }
+    .mainWeather__box > .mainWeather__inner {
+        height: 370px !important;
+    }
+    .swiper-button-prev {
+        left: 10% !important;
+        width: 80px !important;
+        height: 80px !important;
+        padding: 20px 10px !important;
+        line-height: 38px !important;
+    }
+    .swiper-button-next {
+        right: 10% !important;
+        width: 80px !important;
+        height: 80px !important;
+        padding: 20px 10px !important;
+        line-height: 38px !important;
+    }
+    .swiper-wrapper .swiper-name {
+        padding: 10px 25px !important;
+    }
+    #contents > .contents__inner > h2 {
+        padding: 15px !important;
+    }
+    #contents > .contents__inner > .contents__descWrap > .time_weather > div {
+        width: 15% !important;
+    }
+    .mainWeatherInfo__inner > .info {
+        display: flex !important;
+    }
+    .mainWeatherInfo__inner > .info > h5 {
+        width: 60% !important;
+        font-size: 16px !important;
+        text-align: left !important;
+        padding-left: 20px !important;
+    }
+
+    .mainWeatherInfo__inner > .info > p {
+        width: 40% !important;
+        font-size: 15px !important;
+    }
+    .mainWeatherInfo__inner > .info:nth-child(1),
+    .mainWeatherInfo__inner > .info:nth-child(2),
+    .mainWeatherInfo__inner > .info:nth-child(3),
+    .mainWeatherInfo__inner > .info:nth-child(4) {
+        width: 100% !important;
+        border-radius: 10px !important;
+        margin-bottom: 18px !important;
+    }
+    .mainWeatherInfo__inner > .info:nth-child(4) {
+        margin-bottom: 0;
+    }
+    .mainWeather__inner {
+        position: relative;
+    }
+    .mainWeather__inner > .main_cityName {
+        left: 27%;
+        top: 8%;
+    }
+    .mainWeather__inner > .main_cityTemp {
+        left: 19%;
+    }
+    .mainWeather__inner > .main_weatherImg {
+        height: 120px !important;
+        width: 120px !important;
+        transform: none !important;
+        background-size: cover !important;
+        left: auto !important;
+        right: 2% !important;
+        top: -1% !important;
+    }
+    .time_weather > div > div:last-child {
+        font-size: 12px;
+    }
+    .subWeather__inner > .sub_info > h4 {
+        font-size: 12px;
+    }
+    .subWeather__box > .subWeather__inner {
+        align-items: flex-end;
+    }
+}
+@media (max-width: 480px) {
+    #aside.active {
+        width: 95% !important;
+    }
+    #contents > .contents__inner > .contents__descWrap > .time_weather > div:nth-of-type(5),
+    #contents > .contents__inner > .contents__descWrap > .time_weather > div:nth-of-type(6) {
+        display: none;
+    }
+    #contents > .contents__inner > .contents__descWrap > .time_weather > div {
+        width: 20% !important;
+    }
+}

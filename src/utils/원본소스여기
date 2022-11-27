@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>☁️ React Weather Project</title>
+
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+        <!-- reset CSS -->
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <!-- fonts CSS -->
+        <link rel="stylesheet" href="assets/css/fonts.css" />
+        <!-- common CSS -->
+        <link rel="stylesheet" href="assets/css/common.css" />
+        <!-- main CSS -->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!-- swiper CSS -->
+        <link rel="stylesheet" href="assets/css/swiper.css" />
+        <!-- 반응형 CSS -->
+        <link rel="stylesheet" href="assets/css/media.css" />
+    </head>
+    <body>
+        <header id="header" class="header__wrap">
+            <div class="header__inner">
+                <h1><a href="#">NALL MEOK</a></h1>
+                <div id="hambuger__menu" class="hambuger__menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <main id="main" class="main__wrap">
+            <div class="main__inner">
+                <section id="contents" class="contents__wrap">
+                    <div class="contents__inner">
+                        <h2>이런날 이런 음식 어때?</h2>
+                        <div class="contetns__slideWrap">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <!-- <div class="swiper-slide">
+                                        <img src="./assets/img/냉면.png" />
+                                        <div class="swiper-name">냉면</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/삼계탕.png" />
+                                        <div class="swiper-name">삼계탕</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/화채.png" />
+                                        <div class="swiper-name">화채</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/냉면.png" />
+                                        <div class="swiper-name">냉면</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/삼계탕.png" />
+                                        <div class="swiper-name">삼계탕</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/화채.png" />
+                                        <div class="swiper-name">화채</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/냉면.png" />
+                                        <div class="swiper-name">냉면</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/삼계탕.png" />
+                                        <div class="swiper-name">삼계탕</div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/화채.png" />
+                                        <div class="swiper-name">화채</div>
+                                    </div> -->
+                                </div>
+                                <button class="swiper-button-next">Nope!</button>
+                                <button class="swiper-button-prev">Good!</button>
+                            </div>
+                        </div>
+                        <div class="contents__descWrap">
+                            <div class="time_weather">
+                                <div>
+                                    <img src="./assets/img/Sun cloud.png" alt="icon" class="time_weather_svg" />
+                                    <div>AM 06</div>
+                                </div>
+                                <div>
+                                    <img src="./assets/img/Sun cloud.png" alt="icon" class="time_weather_svg" />
+                                    <div>AM 09</div>
+                                </div>
+                                <div>
+                                    <img src="./assets/img/Sun cloud.png" alt="icon" class="time_weather_svg" />
+                                    <div>AM 12</div>
+                                </div>
+                                <div>
+                                    <img src="./assets/img/Sun cloud.png" alt="icon" class="time_weather_svg" />
+                                    <div>PM 03</div>
+                                </div>
+                                <div>
+                                    <img src="./assets/img/Sun cloud.png" alt="icon" class="time_weather_svg" />
+                                    <div>PM 06</div>
+                                </div>
+                                <div>
+                                    <img src="./assets/img/Sun cloud.png" alt="icon" class="time_weather_svg" />
+                                    <div>PM 09</div>
+                                </div>
+                            </div>
+                            <div class="time__desc">
+                                <div>
+                                    <p>
+                                        오늘은 날씨가 너무 더워요. <br />
+                                        시원한 음식으로 더위를 풀어보는 건 어떨까요?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <aside id="aside" class="aside__wrap">
+                    <div class="aside__inner">
+                        <form action="#c" class="search__box">
+                            <p>
+                                <label for="search" class="blind">검색</label>
+                                <input type="text" id="search" placeholder="도시 이름을 입력해주세요." onkeyup="enterKey();" />
+
+                                <img src="assets/img/search_ico.svg" alt="검색 아이콘" />
+                            </p>
+                        </form>
+                        <div class="mainWeather__box">
+                            <div class="mainWeather__inner">
+                                <p class="main_cityName"><img src="assets/img/mapMarker_ico.svg" alt="" />Incheon</p>
+                                <p class="main_cityTemp"><em>3</em> º</p>
+                                <div class="main_weatherImg"></div>
+                                <div class="main__weatherInfo">
+                                    <div class="mainWeatherInfo__inner">
+                                        <article class="info precipitation">
+                                            <h5>강수확률</h5>
+                                            <p>3%</p>
+                                        </article>
+                                        <article class="info humidity">
+                                            <h5>습도</h5>
+                                            <p>63%</p>
+                                        </article>
+                                        <article class="info wind">
+                                            <h5>바람</h5>
+                                            <p>2m/s</p>
+                                        </article>
+                                        <article class="info dust">
+                                            <h5>미세먼지</h5>
+                                            <p>보통</p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subWeather__box">
+                            <div class="subWeather__inner">
+                                <article class="sub_info japan">
+                                    <h4>Japan</h4>
+                                    <div class="subInfo_box">
+                                        <div class="subWeather_img"></div>
+                                        <p class="sub_temp">-8º</p>
+                                    </div>
+                                </article>
+                                <article class="sub_info china">
+                                    <h4>China</h4>
+                                    <div class="subInfo_box">
+                                        <div class="subWeather_img"></div>
+                                        <p class="sub_temp">-8º</p>
+                                    </div>
+                                </article>
+                                <article class="sub_info russia">
+                                    <h4>Russia</h4>
+                                    <div class="subInfo_box">
+                                        <div class="subWeather_img"></div>
+                                        <p class="sub_temp">-8º</p>
+                                    </div>
+                                </article>
+                                <article class="sub_info us">
+                                    <h4>US</h4>
+                                    <div class="subInfo_box">
+                                        <div class="subWeather_img"></div>
+                                        <p class="sub_temp">-8º</p>
+                                    </div>
+                                </article>
+                                <article class="sub_info western">
+                                    <h4>Western</h4>
+                                    <div class="subInfo_box">
+                                        <div class="subWeather_img"></div>
+                                        <p class="sub_temp">-8º</p>
+                                    </div>
+                                </article>
+                                <article class="sub_info eastern">
+                                    <h4>Eastern</h4>
+                                    <div class="subInfo_box">
+                                        <div class="subWeather_img"></div>
+                                        <p class="sub_temp">-8º</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <footer id="footer"></footer>
+    </body>
+
+    <!-- jquery 연결 -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/hambuger.js"></script>
+    <script>
+        // input 박스 엔터키 검색 적용
+        function enterKey() {
+            if (window.event.keyCode == 13) {
+                // 엔터키가 눌렸을 때 실행하는 반응
+                $("#search").submit();
+                // alert("엔터 적용 완료");
+            }
+        }
+        // swiper 데이터
+        const swiperWrapper = document.querySelector(".swiper-wrapper");
+        let mainCityTemp = document.querySelector(".main_cityTemp > em");
+        let foodSunny = [
+            { food: "./assets/img/화채.png", name: "화채" },
+            { food: "./assets/img/냉면.png", name: "냉면" },
+            { food: "./assets/img/삼계탕.png", name: "삼계탕" },
+        ];
+        let foodRainy = [
+            { food: "./assets/img/참치.png", name: "참치" },
+            { food: "./assets/img/콩국수.png", name: "콩국수" },
+            { food: "./assets/img/화채.png", name: "화채" },
+            { food: "./assets/img/냉면.png", name: "냉면" },
+            { food: "./assets/img/삼계탕.png", name: "삼계탕" },
+        ];
+        let foodData = ``;
+
+        if (mainCityTemp.innerText <= 5) {
+            for (i = 0; i < foodRainy.length; i++) {
+                foodData = `
+                <div class="swiper-slide">
+                    <img src="${foodRainy[i].food}" />
+                    <div class="swiper-name">${foodRainy[i].name}</div>
+                    </div>
+                    `;
+                swiperWrapper.innerHTML += foodData;
+            }
+        } else if (mainCityTemp.innerText > 5) {
+            for (i = 0; i < foodSunny.length; i++) {
+                foodData = `
+                <div class="swiper-slide">
+                    <img src="${foodSunny[i].food}" />
+                    <div class="swiper-name">${foodSunny[i].name}</div>
+                    </div>
+                    `;
+                swiperWrapper.innerHTML += foodData;
+            }
+        }
+        // const subWeatherImg = document.querySelectorAll(".subWeather_img"); // subWeather_img > 서브 나라 날씨 이미지
+
+        // swiper
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            coverflowEffect: {
+                rotate: -10,
+                stretch: -200,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // pagination: {
+            //     el: ".swiper-pagination",
+            // },
+        });
+
+        // swiper 버튼 css용 js
+        let animateButton = function (e) {
+            e.preventDefault;
+            //reset animation
+            e.target.classList.remove("animate");
+
+            e.target.classList.add("animate");
+            setTimeout(function () {
+                e.target.classList.remove("animate");
+            }, 700);
+        };
+
+        let bubblyButtons = document.getElementsByClassName("swiper-button-next");
+        let bubblyButtons2 = document.getElementsByClassName("swiper-button-prev");
+
+        for (let i = 0; i < bubblyButtons.length; i++) {
+            bubblyButtons[i].addEventListener("click", animateButton, false);
+        }
+        for (let i = 0; i < bubblyButtons2.length; i++) {
+            bubblyButtons2[i].addEventListener("click", animateButton, false);
+        }
+    </script>
+</html>
