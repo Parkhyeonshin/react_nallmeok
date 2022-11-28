@@ -7,3 +7,4 @@ export { default as ContentDesc } from "./ContentDesc";
 export { default as Loader } from "./Loader";
 export { default as AsideMain } from "./AsideMain";
 export { default as AsideGlobal } from "./AsideGlobal";
+export { default as Error } from "./Error";

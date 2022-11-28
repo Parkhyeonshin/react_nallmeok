@@ -180,7 +180,7 @@ const ContentSlide = ({ temp }) => {
         FoodList = errorfood;
     }
 
-    console.log(temp);
+    // console.log(temp);
     return (
         <div className="contetns__slideWrap">
             <Swiper
@@ -205,7 +205,7 @@ const ContentSlide = ({ temp }) => {
                 className="mySwiper"
             >
                 {FoodList.map((e, i) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={i}>
                         <img src={FoodList[i].img} alt="이미지테스트" />
                         <div className="swiper-name">{FoodList[i].name}</div>
                     </SwiperSlide>

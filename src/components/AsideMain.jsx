@@ -2,7 +2,7 @@ import React from "react";
 import { Loader } from "./";
 
 const AsideMain = ({ temp, pollution }) => {
-    console.log(pollution);
+    // console.log(pollution);
     const currenttemp = Math.floor(temp?.main?.temp);
     const feeltemp = Math.floor(temp?.main?.feels_like);
     if (!pollution?.list) return <Loader />;

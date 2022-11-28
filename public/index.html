@@ -13,6 +13,8 @@
         <script>
             setTimeout(() => {
                 const hambugerMenu = document.getElementById("hambuger__menu");
+                // const faqmenu = document.querySelector(".faq");
+                // const faqdesc = document.querySelector(".faqDesc");
 
                 hambugerMenu.addEventListener("click", () => {
                     if (hambugerMenu.classList.contains("active")) {
@@ -23,6 +25,15 @@
                         hambugerMenu.classList.add("active");
                     }
                 });
+
+                // faqmenu.addEventListener("click", () => {
+                //     if (faqmenu.classList.contains("close")) {
+                //         faqdesc.classList.add("close");
+                //     } else {
+                //         faqdesc.classList.remove("close");
+                //         faqmenu.classList.remove("close");
+                //     }
+                // });
             }, 3000);
             setTimeout(() => {
                 document.querySelector(".swiper-button-prev").innerHTML = "Nope!";
@@ -49,7 +60,7 @@
                 for (let i = 0; i < bubblyButtons2.length; i++) {
                     bubblyButtons2[i].addEventListener("click", animateButton, false);
                 }
-            }, 3000);
+            }, 5000);
         </script>
     </body>
 </html>

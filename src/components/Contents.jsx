@@ -5,7 +5,7 @@ const Contetns = ({ hour, temp }) => {
     // console.log(temp?.main?.temp);
     // const temper = temp?.main?.temp;
     const date = new Date();
-    console.log(date.getHours());
+    // console.log(date.getHours());
     if (!temp?.main) return <Loader />;
     if (date.getHours() < 18 && date.getHours() > 6) {
         if (temp?.weather[0].id >= 200 && temp?.weather[0].id <= 531) {

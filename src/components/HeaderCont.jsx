@@ -8,6 +8,7 @@ const HeaderCont = () => {
                 <h1>
                     <Link to="/">NALL MEOK</Link>
                 </h1>
+
                 <div id="hambuger__menu" className="hambuger__menu">
                     <span></span>
                     <span></span>

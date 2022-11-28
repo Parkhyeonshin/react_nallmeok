@@ -20,7 +20,7 @@ const ContentDesc = ({ hour, temp }) => {
         DescList = "Error/관리자문의요청";
     }
 
-    console.log("desc");
+    // console.log("desc");
     return (
         <div className="contents__descWrap">
             <div className="time_weather">

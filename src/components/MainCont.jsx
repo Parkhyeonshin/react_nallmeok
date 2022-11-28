@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Contents, Aside } from "./";
+import { Contents, Aside, Loader } from "./";
 import { fetchAPI } from "../utils/fetchAPI";
 
 const Maincont = () => {
@@ -25,6 +25,7 @@ const Maincont = () => {
     useEffect(() => {
         fetchAPI(`data/2.5/air_pollution?lat=${lon.lat}&lon=${lon.lon}`).then((data) => setPollution(data));
     }, [lon]);
+    if (!lon) return <Loader />;
 
     return (
         <main id="main" className="main__wrap">
